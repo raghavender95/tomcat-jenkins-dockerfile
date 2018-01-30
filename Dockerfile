@@ -5,7 +5,6 @@ ENV JENKINS_HOME /var/jenkins_home
 # If you bind mount a volume from host/vloume from a data container,
 # ensure you use same uid
 RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
-mkdir ~/container-data
 
 # Jenkins home directoy is a volume, so configuration and build history
 # can be persisted and survive image upgrades
